@@ -1,0 +1,157 @@
+
+* {
+  margin: 0;
+ 
+  border:border-box;
+  
+  
+}
+
+footer{
+  flex: none;
+  
+}
+
+.navbar{
+  height:100px;
+  margin-top: -19px;
+  margin-left: -20px;
+  margin-right: -20px;
+
+}
+
+header{
+  position: relative; /* Fix the position of the header */
+  top: 0;         /* Stick to the top */
+  left: 0;        /* Stick to the left */
+  width: 100%; 
+  padding: 10px 10px;
+  z-index: 1000;
+  
+}
+
+.foo  p {
+    color: whtie;
+
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+  }
+
+
+
+.jj{
+    width:70%;
+    height: 50%;
+    border-radius: 5px;
+    border:3px solid #FAB12F; 
+         
+}
+
+#as{
+  border: 2px solid black;
+  outline: none;
+}
+
+#as::placeholder{
+  color:black;
+}
+
+.form-control{
+  border: 2px solid black;
+  outline: none;
+  color: black;
+}
+
+
+
+.ll{
+  flex-direction: column;;
+  display: flex;
+    gap: 20px;
+}
+
+.mb-3{
+  flex-direction: column;;
+  display: flex;
+  gap: 10px;
+  padding:10px 20px;
+}
+
+.Main{
+  padding:50px;
+  display: flex;
+  justify-content: center;
+}
+
+.kk{
+  margin-top: 2px;
+  padding-left: 264px;
+}
+
+#b{
+  margin-right: 10px;
+}
+.switch{
+  
+  display: flex;
+  justify-content: flex-start;
+  margin-left: -244px;
+  margin-bottom: 10px;
+}
+
+#btuu{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+#mm{
+  flex-direction: row;
+}
+
+#cf{
+  margin-left: -180px;
+}
+
+.nn{
+  flex-direction: column;;
+  display: flex;
+    gap: 20px;
+}
+
+
+
+#conta{
+  height:590px;
+  padding-top: 6%;
+
+}
+
+.ll{
+  padding-top:1%;
+  padding-left: 19%;
+}
+
+footer {
+  position: relative; /* Fix the position of the footer */
+       /* Stick to the bottom */
+         /* Stick to the left */
+  text-align: center; 
+  padding: 10px 10px;
+  bottom: 0;
+  left:0;
+  
+  margin-bottom: -15px;
+  margin-left: -10px;
+  margin-right: -10px;
+  
+  background: #F9F9F9;
+  color: black;
+}
+
+main {
+  margin-bottom: 60px; /* Adjust based on footer height */
+}
+

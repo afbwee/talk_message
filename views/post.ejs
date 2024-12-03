@@ -1,0 +1,36 @@
+<%- include("partials/header.ejs") %>
+<div  id="conta">
+  <div class="Main">
+    <div class="jj">
+      
+      <form action="/submit" method="POST">
+
+        <div class="mb-3">
+          <label for="userLabel" class="form-label">Enter the Title :</label>
+          <input type="text" id="userLabel" name="label" class="form-control" placeholder="Type your title here..." required>
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Content</label>
+          <textarea class="form-control" name="textareaName" id="exampleFormControlTextarea1" rows="5"></textarea>
+        </div>
+
+        <div class="kk" >
+          <div class="switch">
+            <button id="b" type="submit" value="click" class="btn btn-warning">Post</button>
+          </div>
+        </div>
+        
+
+      </form>
+
+    
+
+    </div>
+    
+  </div>
+  
+</div>
+
+
+ <%- include("partials/footer.ejs") %>

@@ -1,0 +1,99 @@
+<%- include("partials/header.ejs") %>
+<div class="ll">
+    <div class="jj">
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">The Mona Lisa has no eyebrows.</label>
+          <textarea id ="as" class="form-control" id="exampleFormControlTextarea1" placeholder="People always wonder why Mona Lisa doesn’t have any eyebrows. This mystery has been solved, all thanks to an engineer named Pascal Cotte. When Da Vinci had painted Mona Lisa, he indeed painted her eyebrows but over time these eyebrows were eroded due to cleaning over time to the point where it’s no longer visible today." rows="5" readonly></textarea>
+        </div>
+    </div>
+    
+    <div class="jj">
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Ants take rest for around 8 Minutes in 12-hour period.</label>
+          <textarea  id ="as" class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Yes, surprising right? But not in the way we interpret sleep. James and Cottel have conducted research which shows that ants have a cyclical pattern of resting periods where each nest respite collectively which lasts for around eight minutes in a 12-hour period." readonly></textarea>
+        </div>
+    </div>
+
+    <div class="jj">
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Chocolate can kill dogs, as it contains theobromine, which affects their heart and nervous system.</label>
+          <textarea id ="as" class="form-control" id="exampleFormControlTextarea1"  placeholder="Chocolate consists of an ingredient called theobromine (similar to caffeine) that is toxic to dogs. Dogs are not capable of breaking it down or metabolizing theobromine as humans can. Theobromine majorly affects a dog’s central nervous system, heart and kidneys." rows="5" readonly></textarea>
+        </div>
+    </div>
+
+    <div class ="nn">
+      <% posts.forEach((post,index) => { %>
+        <div class="jj">
+          <form action="/edit-post/<%= index %>" method="POST" >
+            <div class="mb-3">
+              <label for="textarea-<%= index %>" class="form-label"><%- post.label %></label>
+              <textarea id="textarea-<%= index %>" 
+                name="textareaName" 
+                class="form-control" 
+                rows="5" 
+                readonly><%- post.textareaName %></textarea>
+            </div>
+  
+            <div id="btuu">
+              <div>
+                <div class="kk" >
+                  <div class="switch">
+                    <button id="edit-btn-<%= index %>" 
+                      type="button" 
+                      class="btn btn-warning" 
+                      onclick="toggleEdit(<%= index %>)">Edit</button>
+                  </div>
+                </div>
+              </div>  
+    
+              <div id="btuu">
+                <div class="kk" >
+                  <div class="switch">
+                    <button id="save-btn-<%= index %>" 
+                      type="submit" 
+                      class="btn btn-success" 
+                      style="display: none;">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <form action="/delete-post/<%= index %>" method="POST">
+            <div id="mm">
+              <div class="kk" >
+                <div class="switch">
+                  <button id="" type="submit" value="click" class="btn btn-warning">Delete</button>
+                </div>
+              </div>
+            </div>  
+          </form>
+
+        </div>
+        <%}); %>
+    </div>
+      
+    
+
+
+
+</div>
+
+
+<script>
+  function toggleEdit(index) {
+      const textarea = document.getElementById(`textarea-${index}`);
+      const editButton = document.getElementById(`edit-btn-${index}`);
+      const saveButton = document.getElementById(`save-btn-${index}`);
+
+      if (textarea.readOnly) {
+          // Enable editing
+          textarea.readOnly = false;
+          editButton.style.display = 'none'; // Hide "Edit" button
+          saveButton.style.display = 'inline-block'; // Show "Save" button
+          textarea.focus(); // Focus the textarea for editing
+      }
+  }
+</script>
+
+ <%- include("partials/footer.ejs") %>
